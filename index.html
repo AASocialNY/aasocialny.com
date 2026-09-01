@@ -138,20 +138,55 @@
 
   <!-- Replace YOUR_FORMSPREE_ID with your Formspree endpoint after creating a free account. -->
 <form action="https://formspree.io/f/xvkoappz" method="POST">
-  <label for="name">Name</label>
-    <input id="name" name="name" type="text" required>
 
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Your name"
+      required
+    >
+  </div>
+
+  <div class="form-group">
     <label for="email">Email</label>
-    <input id="email" name="email" type="email" required>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Your email"
+      required
+    >
+  </div>
 
-    <label for="business">Business Name</label>
-    <input id="business" name="business" type="text">
+  <div class="form-group">
+    <label for="business">Business</label>
+    <input
+      type="text"
+      id="business"
+      name="business"
+      placeholder="Your business name"
+    >
+  </div>
 
-    <label for="message">Tell us about your business</label>
-    <textarea id="message" name="message" required></textarea>
+  <div class="form-group">
+    <label for="message">How can we help?</label>
+    <textarea
+      id="message"
+      name="message"
+      rows="5"
+      placeholder="Tell us a little about your business..."
+      required
+    ></textarea>
+  </div>
 
-    <button type="submit">SEND INQUIRY</button>
-  </form>
+  <input type="hidden" name="_subject" value="New AA Social Website Inquiry">
+
+  <button type="submit">Send Inquiry</button>
+
+</form>
 </section>
 
 <footer>
