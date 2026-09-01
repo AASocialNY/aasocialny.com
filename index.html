@@ -1,87 +1,604 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AA Social | Social Media Marketing</title>
-  <meta name="description" content="AA Social is a boutique social media marketing agency based on Long Island, New York.">
-  <link rel="icon" href="logo.png">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AA Social — Social Media, Curated.</title>
+<meta name="description" content="AA Social is a boutique social media agency based on Long Island, New York. Strategic social media management, content creation, social SEO, photo and video.">
+<link rel="icon" href="logo.png">
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: "DM Sans", Arial, sans-serif;
-      color: #741014;
-      background: #f8eee9;
-      line-height: 1.6;
-    }
-    nav {
-      position: sticky; top: 0; z-index: 10;
-      background: rgba(248,238,233,.95);
-      border-bottom: 1px solid rgba(116,16,20,.12);
-      padding: 18px 7%;
-      display: flex; justify-content: space-between; align-items: center;
-      backdrop-filter: blur(10px);
-    }
-    .nav-logo { width: 78px; height: 48px; object-fit: cover; object-position: center; border-radius: 4px; }
-    nav a { color: #741014; text-decoration: none; margin-left: 28px; font-size: 14px; }
-    .hero {
-      min-height: 78vh;
-      padding: 90px 7% 80px;
-      display: grid; place-items: center; text-align: center;
-    }
-    .hero img { width: min(300px, 62vw); margin-bottom: 28px; }
-    h1, h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 500; }
-    h1 { font-size: clamp(42px, 7vw, 78px); line-height: 1.05; }
-    .hero p { max-width: 650px; margin: 24px auto 32px; font-size: 18px; }
-    .button {
-      display: inline-block; background: #741014; color: #fff;
-      padding: 14px 28px; text-decoration: none; border-radius: 2px;
-      font-size: 14px; letter-spacing: .04em;
-    }
-    section { padding: 90px 7%; }
-    .light { background: #fffaf7; }
-    .section-title { font-size: clamp(34px, 5vw, 52px); margin-bottom: 18px; }
-    .intro { max-width: 700px; font-size: 17px; }
-    .services {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
-      margin-top: 45px; background: rgba(116,16,20,.15);
-    }
-    .service { background: #fffaf7; padding: 34px 28px; min-height: 145px; }
-    .service h3 { font-size: 17px; margin-bottom: 8px; }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
-    .about-card { border: 1px solid rgba(116,16,20,.22); padding: 42px; }
-    form { max-width: 720px; margin-top: 35px; }
-    label { display: block; font-size: 13px; margin: 18px 0 7px; }
-    input, textarea {
-      width: 100%; border: 1px solid rgba(116,16,20,.28);
-      background: #fffaf7; padding: 14px; font: inherit; color: #741014;
-      border-radius: 0;
-    }
-    textarea { min-height: 150px; resize: vertical; }
-    button {
-      margin-top: 22px; border: 0; cursor: pointer;
-      background: #741014; color: white; padding: 15px 30px; font: inherit;
-    }
-    footer { padding: 35px 7%; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; font-size: 13px; }
-    footer a { color: inherit; }
-    @media (max-width: 750px) {
-      nav { padding: 14px 5%; }
-      nav div a { margin-left: 12px; font-size: 12px; }
-      section { padding: 65px 6%; }
-      .services, .about-grid { grid-template-columns: 1fr; }
-      .about-grid { gap: 30px; }
-      .hero { min-height: 70vh; padding-top: 60px; }
-    }
-  </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --cream:#f8eee9;
+  --paper:#fffaf7;
+  --burgundy:#741014;
+  --pink:#e7b7b9;
+  --ink:#241719;
+  --line:rgba(116,16,20,.18);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0
+}
+
+html{
+  scroll-behavior:smooth
+}
+
+body{
+  background:var(--cream);
+  color:var(--burgundy);
+  font-family:"DM Sans",Arial,sans-serif;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none
+}
+
+::selection{
+  background:var(--burgundy);
+  color:var(--cream)
+}
+
+/* NAVIGATION */
+
+.nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:50;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 5vw;
+
+  /* BURGUNDY NAV BAR */
+  background:var(--burgundy);
+
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(231,183,185,.25);
+}
+
+.nav img{
+  width:72px;
+  height:auto;
+  display:block
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+  font-size:12px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+/* BLUSH PINK NAV WORDS */
+.nav-links a{
+  color:var(--pink);
+  transition:opacity .25s
+}
+
+.nav-links a:hover{
+  opacity:.6
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  padding:150px 5vw 70px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  position:relative;
+}
+
+.hero-kicker{
+  font-size:11px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  margin-bottom:25px;
+}
+
+.hero h1{
+  font-family:"Playfair Display",Georgia,serif;
+  font-weight:500;
+  font-size:clamp(68px,12.5vw,180px);
+  line-height:.82;
+  letter-spacing:-.055em;
+  max-width:1200px;
+}
+
+.hero h1 em{
+  font-weight:500
+}
+
+.hero-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:40px;
+  margin-top:55px;
+}
+
+.hero-copy{
+  max-width:460px;
+  font-size:17px;
+  line-height:1.65
+}
+
+.cta{
+  display:inline-flex;
+  align-items:center;
+  gap:18px;
+  border:1px solid var(--burgundy);
+  padding:15px 20px;
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  transition:.3s;
+}
+
+.cta:hover{
+  background:var(--burgundy);
+  color:var(--cream)
+}
+
+.hero-stamp{
+  position:absolute;
+  right:6vw;
+  top:29%;
+  width:115px;
+  height:115px;
+  border:1px solid var(--burgundy);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-size:10px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  text-align:center;
+  transform:rotate(10deg);
+}
+
+.hero-stamp span{
+  display:block;
+  line-height:1.5
+}
+
+/* TICKER */
+
+.ticker{
+  border-top:1px solid var(--burgundy);
+  border-bottom:1px solid var(--burgundy);
+  overflow:hidden;
+  white-space:nowrap;
+  background:var(--pink);
+}
+
+.ticker-track{
+  display:inline-block;
+  padding:15px 0;
+  animation:scroll 22s linear infinite;
+  font-size:12px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+
+.ticker-track span{
+  margin:0 28px
+}
+
+@keyframes scroll{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+
+/* SECTIONS */
+
+section{
+  padding:120px 5vw
+}
+
+/* STATEMENT */
+
+.statement{
+  background:var(--burgundy);
+  color:var(--cream);
+  min-height:70vh;
+  display:flex;
+  align-items:center;
+}
+
+.statement-inner{
+  max-width:1150px
+}
+
+.eyebrow{
+  font-size:11px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  margin-bottom:35px;
+}
+
+.statement h2{
+  font-family:"Playfair Display",Georgia,serif;
+  font-weight:500;
+  font-size:clamp(48px,8vw,105px);
+  line-height:.95;
+  letter-spacing:-.04em;
+}
+
+.statement h2 em{
+  color:var(--pink)
+}
+
+/* SERVICES */
+
+.services-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:30px;
+  margin-bottom:60px;
+}
+
+.section-title{
+  font-family:"Playfair Display",Georgia,serif;
+  font-weight:500;
+  font-size:clamp(45px,7vw,88px);
+  line-height:.95;
+  letter-spacing:-.04em;
+}
+
+.services-intro{
+  max-width:330px;
+  font-size:15px;
+  line-height:1.65
+}
+
+.service-list{
+  border-top:1px solid var(--line)
+}
+
+.service{
+  display:grid;
+  grid-template-columns:90px 1fr auto;
+  gap:25px;
+  align-items:center;
+  padding:28px 0;
+  border-bottom:1px solid var(--line);
+  transition:padding .3s,background .3s;
+}
+
+.service:hover{
+  padding-left:18px;
+  padding-right:18px;
+  background:rgba(231,183,185,.22)
+}
+
+.service-number{
+  font-size:11px;
+  letter-spacing:.1em
+}
+
+.service h3{
+  font-family:"Playfair Display",Georgia,serif;
+  font-weight:500;
+  font-size:clamp(27px,3.5vw,48px);
+  line-height:1;
+}
+
+.service-arrow{
+  font-size:24px;
+  transition:transform .3s
+}
+
+.service:hover .service-arrow{
+  transform:translateX(7px)
+}
+
+/* ABOUT */
+
+.about{
+  background:var(--paper);
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:9vw;
+  align-items:start;
+}
+
+.about-big{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(48px,6vw,78px);
+  line-height:.98;
+  letter-spacing:-.04em;
+}
+
+.about-big em{
+  display:block
+}
+
+.about-copy{
+  max-width:600px;
+  font-size:17px;
+  line-height:1.8
+}
+
+.about-copy p+p{
+  margin-top:25px
+}
+
+.founders{
+  margin-top:75px;
+  padding-top:25px;
+  border-top:1px solid var(--line);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+.founder span{
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+.founder h3{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:34px;
+  font-weight:500;
+  margin-top:8px;
+}
+
+/* CONTACT */
+
+.contact{
+  background:var(--pink);
+  min-height:90vh;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8vw;
+}
+
+.contact-title{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(52px,7vw,95px);
+  line-height:.9;
+  letter-spacing:-.05em;
+  font-weight:500;
+}
+
+.contact-title em{
+  display:block
+}
+
+.contact-details{
+  margin-top:40px;
+  font-size:13px;
+  line-height:2
+}
+
+form{
+  max-width:620px
+}
+
+.form-group{
+  margin-bottom:25px
+}
+
+label{
+  display:block;
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+
+input,
+textarea{
+  width:100%;
+  border:0;
+  border-bottom:1px solid rgba(116,16,20,.5);
+  background:transparent;
+  padding:12px 0;
+  color:var(--burgundy);
+  font:inherit;
+  outline:none;
+  border-radius:0;
+}
+
+input::placeholder,
+textarea::placeholder{
+  color:rgba(116,16,20,.55)
+}
+
+input:focus,
+textarea:focus{
+  border-bottom-color:var(--burgundy)
+}
+
+textarea{
+  min-height:120px;
+  resize:vertical
+}
+
+button{
+  border:1px solid var(--burgundy);
+  background:var(--burgundy);
+  color:var(--cream);
+  padding:15px 25px;
+  cursor:pointer;
+  font:inherit;
+  font-size:11px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  transition:.3s;
+}
+
+button:hover{
+  background:transparent;
+  color:var(--burgundy)
+}
+
+/* FOOTER */
+
+footer{
+  background:var(--ink);
+  color:var(--cream);
+  padding:35px 5vw;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+footer a:hover{
+  color:var(--pink)
+}
+
+/* ANIMATIONS */
+
+.reveal{
+  opacity:0;
+  transform:translateY(22px);
+  animation:reveal .8s ease forwards
+}
+
+.delay{
+  animation-delay:.15s
+}
+
+@keyframes reveal{
+  to{
+    opacity:1;
+    transform:none
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+  .nav{
+    padding:15px 5vw
+  }
+
+  .nav img{
+    width:62px
+  }
+
+  .nav-links{
+    gap:14px;
+    font-size:9px
+  }
+
+  .hero{
+    padding-top:125px;
+    min-height:88vh
+  }
+
+  .hero h1{
+    font-size:clamp(62px,19vw,110px)
+  }
+
+  .hero-bottom{
+    display:block;
+    margin-top:40px
+  }
+
+  .hero-copy{
+    font-size:15px;
+    margin-bottom:25px
+  }
+
+  .hero-stamp{
+    width:82px;
+    height:82px;
+    right:7vw;
+    top:21%;
+    font-size:7px
+  }
+
+  section{
+    padding:80px 6vw
+  }
+
+  .statement{
+    min-height:62vh
+  }
+
+  .services-head{
+    display:block;
+    margin-bottom:40px
+  }
+
+  .services-intro{
+    margin-top:25px
+  }
+
+  .service{
+    grid-template-columns:42px 1fr 20px;
+    gap:12px;
+    padding:23px 0
+  }
+
+  .service h3{
+    font-size:29px
+  }
+
+  .about-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+    gap:50px
+  }
+
+  .about-big{
+    font-size:58px
+  }
+
+  .founders{
+    margin-top:50px
+  }
+
+  .contact{
+    min-height:auto
+  }
+
+  .contact-title{
+    font-size:62px
+  }
+}
+</style>
 </head>
+
 <body>
 
-<nav>
-  <img class="nav-logo" src="logo.png" alt="AA Social logo">
-  <div>
+<nav class="nav">
+  <a href="#">
+    <img src="logo.png" alt="AA Social">
+  </a>
+
+  <div class="nav-links">
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
@@ -89,109 +606,302 @@
 </nav>
 
 <header class="hero">
-  <div>
-    <img src="logo.png" alt="AA Social">
-    <h1>Make your social<br>stand out.</h1>
-    <p>Strategic, elevated social media management and content creation for brands ready to show up online.</p>
-    <a class="button" href="#contact">LET'S WORK TOGETHER</a>
+
+  <div class="hero-kicker reveal">
+    Long Island · New York · Social Media Agency
   </div>
+
+  <h1 class="reveal delay">
+    Make your<br>
+    <em>social</em> stand out.
+  </h1>
+
+  <div class="hero-bottom reveal delay">
+
+    <p class="hero-copy">
+      Strategic social media management and elevated content creation
+      for brands ready to be seen, remembered, and talked about.
+    </p>
+
+    <a class="cta" href="#contact">
+      Let's work together <span>↗</span>
+    </a>
+
+  </div>
+
+  <div class="hero-stamp">
+    <span>
+      Strategy<br>
+      ×<br>
+      Creativity<br>
+      ×<br>
+      Social
+    </span>
+  </div>
+
 </header>
 
-<section id="about" class="light">
-  <div class="about-grid">
-    <div>
-      <h2 class="section-title">About AA Social</h2>
-      <p class="intro">
-        AA Social is a boutique social media agency founded by Ahuva Neuman and Ariella Katz.
-        With 4+ years of combined experience in marketing, we bring together strategy,
-        creativity, and a personal approach to every brand we work with.
-      </p>
-      <br>
-      <p class="intro">
-        Based on Long Island, New York, we help businesses create an intentional,
-        authentic, and elevated presence across social media.
-      </p>
-    </div>
-    <div class="about-card">
-      <h2>Our approach</h2>
-      <p>We don't believe in one-size-fits-all content. Every strategy is built around your brand, your audience, and what makes you different.</p>
-    </div>
+<div class="ticker">
+
+  <div class="ticker-track">
+
+    <span>Social Media</span>✦
+    <span>Content Creation</span>✦
+    <span>Social SEO</span>✦
+    <span>Strategy</span>✦
+
+    <span>Social Media</span>✦
+    <span>Content Creation</span>✦
+    <span>Social SEO</span>✦
+    <span>Strategy</span>✦
+
+    <span>Social Media</span>✦
+    <span>Content Creation</span>✦
+    <span>Social SEO</span>✦
+    <span>Strategy</span>✦
+
   </div>
+
+</div>
+
+<section class="statement">
+
+  <div class="statement-inner">
+
+    <div class="eyebrow">
+      The AA Social approach
+    </div>
+
+    <h2>
+      Pretty content is nice.<br>
+      <em>Purposeful content</em><br>
+      is better.
+    </h2>
+
+  </div>
+
 </section>
 
 <section id="services">
-  <h2 class="section-title">What We Do</h2>
-  <p class="intro">From strategy to posting, we manage the pieces that make your social presence feel cohesive and intentional.</p>
-  <div class="services">
-    <div class="service"><h3>Social Media Management</h3><p>Strategy, planning, posting and ongoing management.</p></div>
-    <div class="service"><h3>Content Creation</h3><p>Curated photo and video content made for your brand.</p></div>
-    <div class="service"><h3>Social SEO</h3><p>Optimizing your content so the right people can discover you.</p></div>
-    <div class="service"><h3>Photo + Video</h3><p>On-site content capture for social-first visuals.</p></div>
-    <div class="service"><h3>Community Engagement</h3><p>Helping your brand stay active, responsive and connected.</p></div>
-    <div class="service"><h3>Events + BTS</h3><p>Day-of, behind-the-scenes and photoshoot content.</p></div>
+
+  <div class="services-head">
+
+    <h2 class="section-title">
+      What we do.
+    </h2>
+
+    <p class="services-intro">
+      We handle the strategy, creativity, and consistency behind a social
+      presence that actually feels like your brand.
+    </p>
+
   </div>
+
+  <div class="service-list">
+
+    <a class="service" href="#contact">
+      <span class="service-number">01</span>
+      <h3>Social Media Management</h3>
+      <span class="service-arrow">↗</span>
+    </a>
+
+    <a class="service" href="#contact">
+      <span class="service-number">02</span>
+      <h3>Content Creation</h3>
+      <span class="service-arrow">↗</span>
+    </a>
+
+    <a class="service" href="#contact">
+      <span class="service-number">03</span>
+      <h3>Social SEO</h3>
+      <span class="service-arrow">↗</span>
+    </a>
+
+    <a class="service" href="#contact">
+      <span class="service-number">04</span>
+      <h3>Photo + Video</h3>
+      <span class="service-arrow">↗</span>
+    </a>
+
+    <a class="service" href="#contact">
+      <span class="service-number">05</span>
+      <h3>Community Engagement</h3>
+      <span class="service-arrow">↗</span>
+    </a>
+
+    <a class="service" href="#contact">
+      <span class="service-number">06</span>
+      <h3>Events + BTS</h3>
+      <span class="service-arrow">↗</span>
+    </a>
+
+  </div>
+
 </section>
 
-<section id="contact" class="light">
-  <h2 class="section-title">Let's Work Together</h2>
-  <p class="intro">Tell us a little about your brand and what you're looking for. We'd love to hear from you.</p>
+<section id="about" class="about">
 
-  <!-- Replace YOUR_FORMSPREE_ID with your Formspree endpoint after creating a free account. -->
-<form action="https://formspree.io/f/xvkoappz" method="POST">
+  <div class="about-grid">
 
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input
-      type="text"
-      id="name"
-      name="name"
-      placeholder="Your name"
-      required
-    >
+    <div class="about-big">
+      Two founders.
+      <em>One vision.</em>
+    </div>
+
+    <div class="about-copy">
+
+      <p>
+        AA Social is a boutique social media agency founded by Ahuva Neuman
+        and Ariella Katz. With 4+ years of combined experience in marketing,
+        we bring strategy, creativity, and a personal approach to every brand
+        we work with.
+      </p>
+
+      <p>
+        Based on Long Island, New York, we work with small and medium-sized
+        businesses that want their social presence to feel intentional,
+        elevated, and unmistakably theirs.
+      </p>
+
+      <div class="founders">
+
+        <div class="founder">
+          <span>Founder</span>
+          <h3>Ahuva Neuman</h3>
+        </div>
+
+        <div class="founder">
+          <span>Founder</span>
+          <h3>Ariella Katz</h3>
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input
-      type="email"
-      id="email"
-      name="email"
-      placeholder="Your email"
-      required
-    >
+</section>
+
+<section id="contact" class="contact">
+
+  <div class="contact-grid">
+
+    <div>
+
+      <div class="eyebrow">
+        Have a brand in mind?
+      </div>
+
+      <h2 class="contact-title">
+        Let's make<br>
+        <em>something</em><br>
+        worth scrolling for.
+      </h2>
+
+      <div class="contact-details">
+        Long Island, New York<br>
+        <a href="mailto:info@aasocialny.com">
+          info@aasocialny.com
+        </a>
+      </div>
+
+    </div>
+
+    <form action="https://formspree.io/f/xvkoappz" method="POST">
+
+      <div class="form-group">
+
+        <label for="name">
+          Name
+        </label>
+
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Your name"
+          required
+        >
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="email">
+          Email
+        </label>
+
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Your email"
+          required
+        >
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="business">
+          Business
+        </label>
+
+        <input
+          id="business"
+          name="business"
+          type="text"
+          placeholder="Your business name"
+        >
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="message">
+          Tell us about your brand
+        </label>
+
+        <textarea
+          id="message"
+          name="message"
+          placeholder="What are you looking for?"
+          required
+        ></textarea>
+
+      </div>
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="New AA Social Website Inquiry"
+      >
+
+      <button type="submit">
+        Send inquiry ↗
+      </button>
+
+    </form>
+
   </div>
 
-  <div class="form-group">
-    <label for="business">Business</label>
-    <input
-      type="text"
-      id="business"
-      name="business"
-      placeholder="Your business name"
-    >
-  </div>
-
-  <div class="form-group">
-    <label for="message">How can we help?</label>
-    <textarea
-      id="message"
-      name="message"
-      rows="5"
-      placeholder="Tell us a little about your business..."
-      required
-    ></textarea>
-  </div>
-
-  <input type="hidden" name="_subject" value="New AA Social Website Inquiry">
-
-  <button type="submit">Send Inquiry</button>
-
-</form>
 </section>
 
 <footer>
-  <span>© 2026 AA Social</span>
-  <span><a href="mailto:info@aasocialny.com">info@aasocialny.com</a> · Long Island, NY</span>
+
+  <span>
+    © 2026 AA Social
+  </span>
+
+  <span>
+    Social media, thoughtfully curated.
+  </span>
+
+  <a href="mailto:info@aasocialny.com">
+    info@aasocialny.com
+  </a>
+
 </footer>
 
 </body>
