@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AA Social | Social Media Marketing</title>
+  <meta name="description" content="AA Social is a boutique social media marketing agency based on Long Island, New York.">
+  <link rel="icon" href="logo.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "DM Sans", Arial, sans-serif;
+      color: #741014;
+      background: #f8eee9;
+      line-height: 1.6;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(248,238,233,.95);
+      border-bottom: 1px solid rgba(116,16,20,.12);
+      padding: 18px 7%;
+      display: flex; justify-content: space-between; align-items: center;
+      backdrop-filter: blur(10px);
+    }
+    .nav-logo { width: 78px; height: 48px; object-fit: cover; object-position: center; border-radius: 4px; }
+    nav a { color: #741014; text-decoration: none; margin-left: 28px; font-size: 14px; }
+    .hero {
+      min-height: 78vh;
+      padding: 90px 7% 80px;
+      display: grid; place-items: center; text-align: center;
+    }
+    .hero img { width: min(300px, 62vw); margin-bottom: 28px; }
+    h1, h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 500; }
+    h1 { font-size: clamp(42px, 7vw, 78px); line-height: 1.05; }
+    .hero p { max-width: 650px; margin: 24px auto 32px; font-size: 18px; }
+    .button {
+      display: inline-block; background: #741014; color: #fff;
+      padding: 14px 28px; text-decoration: none; border-radius: 2px;
+      font-size: 14px; letter-spacing: .04em;
+    }
+    section { padding: 90px 7%; }
+    .light { background: #fffaf7; }
+    .section-title { font-size: clamp(34px, 5vw, 52px); margin-bottom: 18px; }
+    .intro { max-width: 700px; font-size: 17px; }
+    .services {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+      margin-top: 45px; background: rgba(116,16,20,.15);
+    }
+    .service { background: #fffaf7; padding: 34px 28px; min-height: 145px; }
+    .service h3 { font-size: 17px; margin-bottom: 8px; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+    .about-card { border: 1px solid rgba(116,16,20,.22); padding: 42px; }
+    form { max-width: 720px; margin-top: 35px; }
+    label { display: block; font-size: 13px; margin: 18px 0 7px; }
+    input, textarea {
+      width: 100%; border: 1px solid rgba(116,16,20,.28);
+      background: #fffaf7; padding: 14px; font: inherit; color: #741014;
+      border-radius: 0;
+    }
+    textarea { min-height: 150px; resize: vertical; }
+    button {
+      margin-top: 22px; border: 0; cursor: pointer;
+      background: #741014; color: white; padding: 15px 30px; font: inherit;
+    }
+    footer { padding: 35px 7%; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; font-size: 13px; }
+    footer a { color: inherit; }
+    @media (max-width: 750px) {
+      nav { padding: 14px 5%; }
+      nav div a { margin-left: 12px; font-size: 12px; }
+      section { padding: 65px 6%; }
+      .services, .about-grid { grid-template-columns: 1fr; }
+      .about-grid { gap: 30px; }
+      .hero { min-height: 70vh; padding-top: 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <img class="nav-logo" src="logo.png" alt="AA Social logo">
+  <div>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <img src="logo.png" alt="AA Social">
+    <h1>Make your social<br>stand out.</h1>
+    <p>Strategic, elevated social media management and content creation for brands ready to show up online.</p>
+    <a class="button" href="#contact">LET'S WORK TOGETHER</a>
+  </div>
+</header>
+
+<section id="about" class="light">
+  <div class="about-grid">
+    <div>
+      <h2 class="section-title">About AA Social</h2>
+      <p class="intro">
+        AA Social is a boutique social media agency founded by Ahuva Neuman and Ariella Katz.
+        With 4+ years of combined experience in marketing, we bring together strategy,
+        creativity, and a personal approach to every brand we work with.
+      </p>
+      <br>
+      <p class="intro">
+        Based on Long Island, New York, we help businesses create an intentional,
+        authentic, and elevated presence across social media.
+      </p>
+    </div>
+    <div class="about-card">
+      <h2>Our approach</h2>
+      <p>We don't believe in one-size-fits-all content. Every strategy is built around your brand, your audience, and what makes you different.</p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <h2 class="section-title">What We Do</h2>
+  <p class="intro">From strategy to posting, we manage the pieces that make your social presence feel cohesive and intentional.</p>
+  <div class="services">
+    <div class="service"><h3>Social Media Management</h3><p>Strategy, planning, posting and ongoing management.</p></div>
+    <div class="service"><h3>Content Creation</h3><p>Curated photo and video content made for your brand.</p></div>
+    <div class="service"><h3>Social SEO</h3><p>Optimizing your content so the right people can discover you.</p></div>
+    <div class="service"><h3>Photo + Video</h3><p>On-site content capture for social-first visuals.</p></div>
+    <div class="service"><h3>Community Engagement</h3><p>Helping your brand stay active, responsive and connected.</p></div>
+    <div class="service"><h3>Events + BTS</h3><p>Day-of, behind-the-scenes and photoshoot content.</p></div>
+  </div>
+</section>
+
+<section id="contact" class="light">
+  <h2 class="section-title">Let's Work Together</h2>
+  <p class="intro">Tell us a little about your brand and what you're looking for. We'd love to hear from you.</p>
+
+  <!-- Replace YOUR_FORMSPREE_ID with your Formspree endpoint after creating a free account. -->
+  <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" required>
+
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" required>
+
+    <label for="business">Business Name</label>
+    <input id="business" name="business" type="text">
+
+    <label for="message">Tell us about your business</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">SEND INQUIRY</button>
+  </form>
+</section>
+
+<footer>
+  <span>© 2026 AA Social</span>
+  <span><a href="mailto:info@aasocialny.com">info@aasocialny.com</a> · Long Island, NY</span>
+</footer>
+
+</body>
+</html>
