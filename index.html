@@ -504,10 +504,16 @@ footer a:hover{
 
 @media (max-width: 750px) {
 
-  /* Prevent horizontal overflow */
+ /* =========================
+   MOBILE VERSION
+   ========================= */
+
+@media (max-width: 750px) {
+
   html,
   body {
     width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
   }
 
@@ -515,38 +521,35 @@ footer a:hover{
      NAVIGATION
      ========================= */
 
-  nav {
-    position: sticky;
+  .nav {
+    position: fixed;
     top: 0;
-    z-index: 100;
+    left: 0;
     width: 100%;
-    height: 108px;
-    padding: 16px 5%;
+    height: 100px;
+    padding: 14px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #741014;
-    border-bottom: none;
+    background: var(--burgundy);
+    z-index: 100;
   }
 
-  .nav-logo {
-    width: 64px;
-    height: 64px;
-    object-fit: cover;
-    border-radius: 0;
+  .nav img {
+    width: 62px;
+    height: auto;
   }
 
-  nav div {
+  .nav-links {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 18px;
+    font-size: 10px;
+    letter-spacing: .12em;
   }
 
-  nav a {
-    margin-left: 0;
-    color: #f8eee9;
-    font-size: 11px;
-    letter-spacing: .12em;
+  .nav-links a {
+    color: var(--pink);
     white-space: nowrap;
   }
 
@@ -557,73 +560,86 @@ footer a:hover{
   .hero {
     width: 100%;
     min-height: auto;
-    padding: 105px 5% 105px;
+    padding: 145px 5% 85px;
     display: block;
-    text-align: left;
     overflow: hidden;
   }
 
-  .hero > div {
+  .hero-kicker {
     width: 100%;
     max-width: 100%;
+    font-size: 10px;
+    line-height: 1.7;
+    letter-spacing: .16em;
+    margin-bottom: 42px;
   }
 
-  /* Hide the decorative circle */
-  .hero-bottom,
-  .hero-circle,
-  .strategy-circle,
-  .circle,
-  .orbit,
-  .hero-decoration {
-    display: none !important;
-  }
-
-  /* Small eyebrow text */
-  .hero .eyebrow,
-  .hero .overline {
-    width: 100%;
-    max-width: 100%;
-    font-size: 12px;
-    line-height: 1.5;
-    letter-spacing: .18em;
-    margin-bottom: 48px;
-  }
-
-  /* Main heading */
   .hero h1 {
     width: 100%;
     max-width: 100%;
-    margin: 0;
-    font-size: clamp(64px, 17vw, 108px);
+    font-size: clamp(62px, 17vw, 100px);
     line-height: .84;
     letter-spacing: -.055em;
     overflow-wrap: normal;
     word-break: normal;
   }
 
-  /* Paragraph */
-  .hero p {
-    width: 100%;
-    max-width: 100%;
-    margin: 65px 0 38px;
-    font-size: 18px;
-    line-height: 1.55;
+  .hero h1 em {
+    font-style: italic;
   }
 
-  /* CTA */
-  .button {
+  /* Hide the decorative strategy circle */
+  .hero-stamp {
+    display: none !important;
+  }
+
+  /* =========================
+     HERO BOTTOM
+     ========================= */
+
+  .hero-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 35px;
+    margin-top: 65px;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 100%;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .cta {
+    width: 100%;
+    min-height: 76px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px 22px;
+    font-size: 11px;
+    letter-spacing: .13em;
+  }
+
+  /* =========================
+     TICKER
+     ========================= */
+
+  .ticker {
     width: 100%;
-    max-width: 100%;
-    min-height: 86px;
-    padding: 20px 24px;
-    border: 1px solid #741014;
-    background: transparent;
-    color: #741014;
-    font-size: 12px;
-    letter-spacing: .14em;
+    overflow: hidden;
+  }
+
+  .ticker-track {
+    font-size: 10px;
+    padding: 13px 0;
+  }
+
+  .ticker-track span {
+    margin: 0 18px;
   }
 
   /* =========================
@@ -636,19 +652,75 @@ footer a:hover{
     overflow: hidden;
   }
 
-  .section-title {
-    width: 100%;
-    max-width: 100%;
-    font-size: clamp(42px, 12vw, 68px);
-    line-height: .9;
+  /* =========================
+     STATEMENT
+     ========================= */
+
+  .statement {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .statement h2 {
+    font-size: clamp(43px, 12vw, 68px);
+    line-height: .94;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: .17em;
     margin-bottom: 25px;
   }
 
-  .intro {
+  /* =========================
+     SERVICES
+     ========================= */
+
+  .services-head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 45px;
+  }
+
+  .section-title {
+    width: 100%;
+    font-size: clamp(45px, 12vw, 68px);
+    line-height: .92;
+  }
+
+  .services-intro {
     width: 100%;
     max-width: 100%;
-    font-size: 17px;
-    line-height: 1.6;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .service {
+    grid-template-columns: 35px 1fr auto;
+    gap: 12px;
+    padding: 25px 0;
+  }
+
+  .service-number {
+    font-size: 10px;
+  }
+
+  .service h3 {
+    font-size: 23px;
+    line-height: 1.05;
+  }
+
+  .service-arrow {
+    font-size: 19px;
+  }
+
+  .service:hover {
+    padding-left: 0;
+    padding-right: 0;
+    background: transparent;
   }
 
   /* =========================
@@ -659,72 +731,75 @@ footer a:hover{
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 45px;
+    gap: 50px;
   }
 
-  .about-grid > div {
+  .about-big {
+    width: 100%;
+    font-size: clamp(48px, 12vw, 72px);
+    line-height: .95;
+  }
+
+  .about-copy {
     width: 100%;
     max-width: 100%;
-  }
-
-  .about-card {
-    width: 100%;
-    padding: 30px;
-  }
-
-  .about-card h2 {
-    font-size: 36px;
-    line-height: 1;
-    margin-bottom: 18px;
-  }
-
-  .about-card p {
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.75;
   }
 
-  /* =========================
-     SERVICES
-     ========================= */
+  .about-copy p + p {
+    margin-top: 22px;
+  }
 
-  .services {
-    display: grid;
+  .founders {
+    margin-top: 55px;
     grid-template-columns: 1fr;
-    width: 100%;
-    margin-top: 40px;
-    gap: 1px;
+    gap: 28px;
   }
 
-  .service {
-    width: 100%;
-    min-height: auto;
-    padding: 30px 22px;
-  }
-
-  .service h3 {
-    font-size: 17px;
-    line-height: 1.3;
-    margin-bottom: 9px;
-  }
-
-  .service p {
-    font-size: 15px;
-    line-height: 1.55;
+  .founder h3 {
+    font-size: 30px;
   }
 
   /* =========================
      CONTACT
      ========================= */
 
+  .contact {
+    min-height: auto;
+  }
+
+  .contact-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 60px;
+  }
+
+  .contact-title {
+    width: 100%;
+    font-size: clamp(50px, 13vw, 78px);
+    line-height: .9;
+  }
+
+  .contact-details {
+    margin-top: 30px;
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
   form {
     width: 100%;
     max-width: 100%;
-    margin-top: 35px;
+  }
+
+  .form-group {
+    margin-bottom: 25px;
   }
 
   label {
-    font-size: 12px;
-    margin: 20px 0 8px;
+    font-size: 10px;
+    margin-bottom: 8px;
   }
 
   input,
@@ -732,20 +807,17 @@ footer a:hover{
     width: 100%;
     max-width: 100%;
     font-size: 16px;
-    padding: 15px;
+    padding: 13px 0;
   }
 
   textarea {
-    min-height: 145px;
+    min-height: 130px;
   }
 
   button {
     width: 100%;
     min-height: 55px;
-    margin-top: 22px;
-    padding: 16px 25px;
-    font-size: 12px;
-    letter-spacing: .1em;
+    margin-top: 10px;
   }
 
   /* =========================
@@ -754,11 +826,12 @@ footer a:hover{
 
   footer {
     width: 100%;
-    padding: 32px 6%;
+    padding: 30px 6%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    font-size: 12px;
+    gap: 12px;
+    font-size: 10px;
+    line-height: 1.5;
   }
 
 }
@@ -803,15 +876,6 @@ footer a:hover{
 
   </div>
 
-  <div class="hero-stamp">
-    <span>
-      Strategy<br>
-      ×<br>
-      Creativity<br>
-      ×<br>
-      Social
-    </span>
-  </div>
 
 </header>
 
