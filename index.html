@@ -497,96 +497,156 @@ footer a:hover{
 
 /* MOBILE */
 
+/* MOBILE */
 @media(max-width:750px){
 
   .nav{
-    padding:15px 5vw
+    padding:15px 5vw;
+    min-height:82px;
   }
 
   .nav img{
-    width:62px
+    width:62px;
   }
 
   .nav-links{
+    display:flex;
+    align-items:center;
     gap:14px;
-    font-size:9px
+    font-size:9px;
+    white-space:nowrap;
+  }
+
+  .nav-links a{
+    white-space:nowrap;
   }
 
   .hero{
-    padding-top:125px;
-    min-height:88vh
+    padding:105px 6vw 75px;
+    min-height:auto;
+    overflow:hidden;
+  }
+
+  .hero-kicker{
+    font-size:11px;
+    line-height:1.7;
+    letter-spacing:.22em;
+    max-width:100%;
+    padding-right:20px;
   }
 
   .hero h1{
-    font-size:clamp(62px,19vw,110px)
+    font-size:clamp(54px,17vw,78px);
+    line-height:.92;
+    letter-spacing:-.045em;
+    max-width:100%;
+    margin-top:28px;
   }
 
   .hero-bottom{
     display:block;
-    margin-top:40px
+    margin-top:55px;
+    max-width:100%;
   }
 
   .hero-copy{
     font-size:15px;
-    margin-bottom:25px
+    line-height:1.7;
+    margin-bottom:28px;
+    max-width:100%;
+  }
+
+  .cta{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    max-width:480px;
+    padding:18px 20px;
+    font-size:10px;
+    letter-spacing:.16em;
   }
 
   .hero-stamp{
-    width:82px;
-    height:82px;
-    right:7vw;
-    top:21%;
-    font-size:7px
+    width:92px;
+    height:92px;
+    right:5vw;
+    top:15%;
+    font-size:7px;
+    line-height:1.9;
   }
 
   section{
-    padding:80px 6vw
+    padding:75px 6vw;
   }
 
   .statement{
-    min-height:62vh
+    min-height:55vh;
   }
 
   .services-head{
     display:block;
-    margin-bottom:40px
+    margin-bottom:40px;
   }
 
   .services-intro{
-    margin-top:25px
+    margin-top:25px;
   }
 
   .service{
-    grid-template-columns:42px 1fr 20px;
+    grid-template-columns:36px minmax(0,1fr) 20px;
     gap:12px;
-    padding:23px 0
+    padding:23px 0;
   }
 
   .service h3{
-    font-size:29px
+    font-size:25px;
+    line-height:1.1;
+  }
+
+  .service p{
+    font-size:13px;
+    line-height:1.6;
   }
 
   .about-grid,
   .contact-grid{
     grid-template-columns:1fr;
-    gap:50px
+    gap:50px;
   }
 
   .about-big{
-    font-size:58px
+    font-size:52px;
+    line-height:.95;
   }
 
   .founders{
-    margin-top:50px
+    margin-top:50px;
   }
 
   .contact{
-    min-height:auto
+    min-height:auto;
   }
 
   .contact-title{
-    font-size:62px
+    font-size:54px;
+    line-height:.95;
   }
+
+  form{
+    width:100%;
+  }
+
+  input,
+  textarea{
+    width:100%;
+    max-width:100%;
+  }
+
+  button{
+    width:100%;
+  }
+
 }
 </style>
 </head>
